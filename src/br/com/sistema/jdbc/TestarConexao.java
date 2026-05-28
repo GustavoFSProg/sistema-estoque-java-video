@@ -21,7 +21,7 @@ public class TestarConexao {
             
               System.out.println("DEU CERTO A CONEXÃO VIA CLASSE");
         }catch(Exception e){
-              System.out.println("DEU ERRO FATAL!");
+              System.out.println("DEU ERRO FATAL!"+e);
         }
         
         // TODO code application logic here

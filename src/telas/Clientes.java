@@ -5,6 +5,7 @@
  */
 package telas;
 
+import br.com.sistema.dao.ClientesDAO;
 import conexao.ModuloConexao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -656,7 +657,26 @@ public class Clientes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SalvarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalvarButtonActionPerformed
-        adicionar();
+        Clientes obj = new Clientes();
+        
+             obj.setNome(Nome.getText()); 
+             obj.setRG(RG.getText());   
+            obj.setCPF(CPF.getText());       
+            obj.setEmail(Email.getText()); 
+            obj.setTelevone("00");        
+            obj.setCelular(Celular.getText());   
+            obj.setCEP(CEP.getText());
+            obj.setEndereco(Endereco.getText()); 
+            obj.setNume(Numero.getText());    
+            obj.setComplemento(Complemento.getText());            
+            obj.setBairro(Bairro.getText());   
+            obj.setCidade(Cidade.getText());  
+            obj.setEstado(Estado.getSelectedItem().toString()); 
+            
+            
+            ClientesDAO dao = new ClientesDAO();
+            
+            dao.Salvar(obj);
        
 // TODO add your handling code here:
     }//GEN-LAST:event_SalvarButtonActionPerformed
@@ -769,4 +789,56 @@ pesquisar_cliente();            // TODO add your handling code here:
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
+
+    private void setNome(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void setRG(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void setCPF(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void setEmail(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void setTelevone(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void setCelular(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void setCEP(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void setEndereco(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void setNume(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void setComplemento(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void setBairro(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void setCidade(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void setEstado(String toString) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
